@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/montserrat": "^5.0.17",
     "@heroicons/react": "^2.1.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +13,8 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@types/react-router-dom": "^5.3.3",
+    "concurrently": "^8.2.2",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
@@ -21,7 +24,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "fakeAPI": "json-server --watch db.json --port 3001",
+    "react": "react-scripts start",
+    "start": "concurrently \"npm:react\" \"npm:test\" \"npm:fakeAPI\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,8 +50,13 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript-eslint": "^7.6.0"
   }
 }

@@ -1,13 +1,16 @@
+
+@use '../../styles/variables';
+
 .listaCadernos{
   height: 100%;
 
   &__lista{
     flex-wrap: wrap;
-    gap: 18px;
+    gap: variables.$m-18;
 
     li{
-      height: 220px;
-      width: 180px;
+      height: 13.75rem;
+      width: 11.25rem;
       box-sizing: border-box;
       border-left: 6px dashed;
       cursor: pointer;

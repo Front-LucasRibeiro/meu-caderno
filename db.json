@@ -1,0 +1,16 @@
+{
+  "cadernos": [
+    {
+      "nome": "CSS",
+      "page": "/css",
+      "cor": "bg-orange-500",
+      "conteudo": "conteúdo do css"
+    },
+    {
+      "nome": "Javascript",
+      "page": "/javascript",
+      "cor": "bg-green-500",
+      "conteudo": "conteudo do js"
+    }
+  ]
+}

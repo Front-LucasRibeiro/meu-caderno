@@ -1,4 +1,6 @@
-const Pagina404 = () => {
+import React from 'react';
+
+const Pagina404: React.FC = () => {
   
   
   return(

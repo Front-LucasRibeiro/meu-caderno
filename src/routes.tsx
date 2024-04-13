@@ -3,6 +3,7 @@ import ListaCadernos from './components/ListaCadernos';
 import Pagina404 from './pages/Pagina404';
 import Caderno from './components/Caderno';
 import { useEffect, useState } from 'react';
+import CadastrarCaderno from './components/CadastrarCaderno';
 
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
     <Routes>
       <Route path="/" element={<ListaCadernos cadernos={lista} />} />
       <Route path="/caderno/:id" element={<Caderno />} />
+      <Route path='/cadastrar-caderno' element={<CadastrarCaderno/>} />
       <Route path="*" element={<Pagina404 />} />
     </Routes>
   )

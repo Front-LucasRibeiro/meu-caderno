@@ -1,5 +1,31 @@
-.conteudo{
+@use '../../styles/variables';
+
+.conteudoWrap{
+  max-width: 49.5rem;
   width: 100%;
-  border: 1px solid #ccc;
-  height: 100vh;
+
+  .conteudo{
+    width: 100%;
+    max-width: 49.5rem;
+    border: 1px solid #ccc;
+    height: 600px;
+    max-height: max-content;
+
+    &__options{
+      width: 100%;
+      justify-self: baseline;
+
+      li{
+        font-size: variables.$m-14;
+        cursor: pointer;
+        
+      }
+    }
+  
+    &:focus{
+      outline: 0;
+    }
+  }
 }
+
+

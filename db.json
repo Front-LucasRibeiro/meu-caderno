@@ -12,7 +12,7 @@
       "nome": "Javascript",
       "page": "/javascript",
       "cor": "bg-blue-500",
-      "conteudo": "conteudo do js"
+      "conteudo": "{\"blocks\":[{\"key\":\"5imsf\",\"text\":\"conteúdo js\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"bmflq\",\"text\":\"\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"8de1l\",\"text\":\"teste\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[{\"offset\":0,\"length\":5,\"style\":\"BOLD\"}],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"
     }
   ]
 }

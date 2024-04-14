@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ title, isAuthenticated, username, onLog
           {isAuthenticated ? (
             <>
               <li className="text-white hover:text-gray-300">
-                <Link to="/cadastrar-caderno">Cadastrar caderno</Link> 
+                <Link to="/cadastrar-caderno" data-testid="linkCadastrar">Cadastrar caderno</Link> 
               </li>
               <li className="text-white hover:text-gray-300" data-testid="nameUser">Olá, {username}</li>
             </>

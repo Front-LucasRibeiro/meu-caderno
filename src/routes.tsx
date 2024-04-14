@@ -24,7 +24,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<ListaCadernos cadernos={lista} />} />
-      <Route path="/caderno/:id" element={<Caderno />} />
+      <Route path="/caderno/:name/:id" element={<Caderno />} />
       <Route path='/cadastrar-caderno' element={<CadastrarCaderno/>} />
       <Route path="*" element={<Pagina404 />} />
     </Routes>

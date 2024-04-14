@@ -10,7 +10,7 @@ import { Caderno as ICaderno } from '../Shared/ICaderno';
 import s from './styles.module.scss';
 
 const Caderno = () => {
-  const { id } = useParams();
+  const { id, name } = useParams();
   const [nomeCaderno, setNomeCaderno] = useState<string>("");
   const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
   const [content, setContent] = useState<string>("");
@@ -29,7 +29,8 @@ const Caderno = () => {
     fetch("http://localhost:3001/cadernos")
       .then(resp => resp.json())
       .then((data: ICaderno[]) => {
-        const cadernoProcurado = data.find(caderno => caderno.nome.toLowerCase() === id);
+        const cadernoProcurado = data.find(caderno => caderno.nome.toLowerCase() === name);
+
         if (cadernoProcurado) {
           const editorState = convertContentToEditorState(cadernoProcurado.conteudo);
           setEditorState(editorState);
@@ -62,7 +63,7 @@ const Caderno = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/cadernos/1', config)
+      const response = await fetch(`http://localhost:3001/cadernos/${id}`, config)
       const result = await response.json();
       console.log("sucesso:", result);
     } catch (error) {

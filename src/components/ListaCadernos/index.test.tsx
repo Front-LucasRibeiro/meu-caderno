@@ -8,6 +8,7 @@ describe('Lista Cadernos Component', () => {
       <BrowserRouter>
         <ListaCadernos cadernos={
           [{
+            id: "1",
             nome: "ReactJS",
             page: "/reactjs",
             cor: "bg-orange-500",

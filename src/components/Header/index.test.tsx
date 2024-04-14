@@ -44,16 +44,21 @@ describe('Header Component', () => {
     expect(list).toBeInTheDocument();
 
     // Verifica se o número de elementos <li> é no máximo 5
+    // eslint-disable-next-line testing-library/no-node-access
     const listItemElements = list.querySelectorAll('li');
     expect(listItemElements.length).toBeLessThanOrEqual(5);
   });
 
-  test('deve renderizar o nome do usuário se estiver logado', () => {
+  test('deve renderizar o nome do usuário, e link cadastrar caderno se estiver logado', () => {
     render(
       <BrowserRouter>
         <Header title="Meu Título" isAuthenticated={true} />
       </BrowserRouter>
     );
+
+    const linkCadastrar = screen.getByTestId('linkCadastrar'); 
+    expect(linkCadastrar).toBeInTheDocument();
+    expect(linkCadastrar).toHaveTextContent("Cadastrar caderno");
 
     const nameUser = screen.getByTestId('nameUser');
     expect(nameUser).toBeInTheDocument();

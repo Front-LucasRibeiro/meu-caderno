@@ -27,9 +27,10 @@
   "scripts": {
     "fakeAPI": "json-server --watch db.json --port 3001",
     "react": "react-scripts start",
-    "start": "concurrently \"npm:react\" \"npm:test\" \"npm:fakeAPI\" ",
+    "start": "concurrently \"npm:react\" \"npm:test\" \"npm:fakeAPI\" \"npm:api\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "api": "cd api && npm start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
